@@ -5,7 +5,7 @@ def action(Action):
             print(f"====Contacts List====\n {contact}")
         case 2:
             name = input("Enter the Name: ")
-            num = int(input("Enter the number: "))
+            num =  input("Enter the number: ")
             add(contact, name, num)
         case 3:
             print("====Search Bar====")
@@ -30,27 +30,27 @@ def add(contact, name, num):
 
 def ser(contact, search_value):
     for c in contact:
-          if c["name"] == search_value or str(c["number"]) == search_value:
+          if c["name"] == search_value or c["number"] == search_value:
                return print(f"Record: {c}")
     return print("NO Record Found!")
 
 def dele(contact, search_value):
     for c in contact:
-        if c["name"] == search_value or str(c["number"]) == search_value:
+        if c["name"] == search_value or c["number"] == search_value:
             contact.remove(c)
             return print("Done!")
     return print("No Record Found!")
 
 def upd(contact, search_value, update, update_value):
     for c in contact:
-        if c["name"] == search_value or str(c["number"]) == search_value:
+        if c["name"] == search_value or c["number"] == search_value:
             c[update] = update_value
             return print("Done!")
     return print("No Record Found!")
 
 while True:
     print("======Contacts======")
-    Action = int(input("1: Show Contacts \n2: Add Contact\n3: Search\n4: Delete Contact\n5: Update Contact\n6: exit\n =="))
+    Action = int(input("1: Show Contacts \n2: Add Contact\n3: Search\n4: Delete Contact\n5: Update Contact\n6: exit\n   Enter: "))
     if Action == 6:
         print("====Existing Contacts====")
         break

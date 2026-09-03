@@ -43,16 +43,16 @@ def highest_and_lowest(stre, subjects, student):
                     if lowest == 0 or current < lowest:
                        lowest = current
                        lowest_student = j
-    print("====Highest====")
-    print(f"Highest Marks in {i}:")
-    print(f" -{highest} and Student name is \"{highest_student}\"")
-    print("====Lowest====")
-    print(f"Lowest Marks in {i}:") 
-    print(f" -{lowest} and Student name is \"{lowest_student}\"")
+        print("====Highest====")
+        print(f"Highest Marks in {i}:")
+        print(f" -{highest} and Student name is \"{highest_student}\"")
+        print("====Lowest====")
+        print(f"Lowest Marks in {i}:") 
+        print(f" -{lowest} and Student name is \"{lowest_student}\"")
     return print("Done!")
 
-school = input("Enter the School Name: ")
-print(f"======Welcome to {school}======")
+department = input("Enter the Department Name: ")
+print(f"======Welcome to {department} Department======")
 stre = int(input("How many Entries: "))
 sub = int(input("HOw many Subject each student is taking: "))
 for i in range(sub):

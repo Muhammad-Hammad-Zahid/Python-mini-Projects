@@ -16,5 +16,5 @@ A command line **Python spplication** to manage, find average and rank the highe
 2. Download or clone `Students_Grade.py`.
 3. Open your terminal, navigate to the folder, and run:
    ```bash
-   python Srudents_Grade.py
+   python Students_Grade.py
    ```

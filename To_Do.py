@@ -11,17 +11,22 @@ def view(To_Do):
 def add(To_Do):
     print("Add new Task: ")
     typ = int(input("Select the type: \n(1): Yes/No \n(2): Measurable \n Enter the value: "))
-    task = input("Title: ")
-    To_Do[task] = []
-    if typ == 2:
-        unit = input("Unit \"e.g., Minutes, Hours, Days \": ")
-        dura = int(input("Duration: "))
-        status = "Pending"
-        To_Do[task].append({'Type': typ, 'Unit': unit, 'Duration': dura, 'Status': status})
+    if typ < 1 and typ > 2: 
+        task = input("Title: ")
+        To_Do[task] = []
+        if typ == 2:
+            unit = input("Unit \"e.g., Minutes, Hours, Days \": ")
+            dura = int(input("Duration: "))
+            status = "Pending"
+            To_Do[task].append({'Type': typ, 'Unit': unit, 'Duration': dura, 'Status': status})
+            print("\"New Task is Created!\"")
+        else:
+            status = "Pending"
+            To_Do[task].append({'Type': typ, 'Status': status})
+            print("\"New Task is Created!\"")
     else:
-        status = "Pending"
-        To_Do[task].append({'Type': typ, 'Status': status})
-    return print("\"New Task is Created!\"")
+         print("Invalid type!")
+    return print("Done!")
 
 def dele(To_Do):
     if not To_Do:
@@ -32,7 +37,6 @@ def dele(To_Do):
                     print(f"({i+1}): {name}")
             task_num = int(input("\nEnter the number of the task to delete: "))
 
-            # Validate if the entered number matches an actual item in the list
             keys_list = list(To_Do.keys())
             if 1 <= task_num <= len(To_Do):
                 key_to_delete = keys_list[task_num - 1]

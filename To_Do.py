@@ -30,8 +30,6 @@ def dele(To_Do):
         try:
             for i, name in enumerate(To_Do.keys()):
                     print(f"({i+1}): {name}")
-            for i, name in enumerate(To_Do.keys()):
-                print(f"({i+1}): {name}")
             task_num = int(input("\nEnter the number of the task to delete: "))
 
             # Validate if the entered number matches an actual item in the list
@@ -53,9 +51,7 @@ def updatestatus(To_Do):
     else:
         try:
             for i, name in enumerate(To_Do.keys()):
-                print(f"({i+1}): {name}")     
-            for i, name in enumerate(To_Do.keys()):
-                print(f"({i+1}): {name}")
+                print(f"({i+1}): {name}") 
             task_num = int(input("\nEnter the number of the task: "))
             # Validate if the entered number matches an actual item in the list
             keys_list = list(To_Do.keys())
@@ -97,8 +93,6 @@ def updatetask(To_Do):
                         print("\nNo tasks available.")
     else:
         try:
-            for i, name in enumerate(To_Do.keys()):
-                print(f"({i+1}): {name}")
             for i, name in enumerate(To_Do.keys()):
                 print(f"({i+1}): {name}")
             task_num = int(input("\nEnter the number of the task (\"Type can't be change\"): "))
